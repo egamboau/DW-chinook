@@ -1,0 +1,59 @@
+{if $ROW2 == 1}São José dos Campos{/if}
+{if $ROW2 == 2}Stuttgart{/if}
+{if $ROW2 == 3}Montréal{/if}
+{if $ROW2 == 4}Oslo{/if}
+{if $ROW2 == 5}Prague{/if}
+{if $ROW2 == 6}Prague{/if}
+{if $ROW2 == 7}Vienne{/if}
+{if $ROW2 == 8}Brussels{/if}
+{if $ROW2 == 9}Copenhagen{/if}
+{if $ROW2 == 10}São Paulo{/if}
+{if $ROW2 == 11}São Paulo{/if}
+{if $ROW2 == 12}Rio de Janeiro{/if}
+{if $ROW2 == 13}Brasília{/if}
+{if $ROW2 == 14}Edmonton{/if}
+{if $ROW2 == 15}Vancouver{/if}
+{if $ROW2 == 16}Mountain View{/if}
+{if $ROW2 == 17}Redmond{/if}
+{if $ROW2 == 18}New York{/if}
+{if $ROW2 == 19}Cupertino{/if}
+{if $ROW2 == 20}Mountain View{/if}
+{if $ROW2 == 21}Reno{/if}
+{if $ROW2 == 22}Orlando{/if}
+{if $ROW2 == 23}Boston{/if}
+{if $ROW2 == 24}Chicago{/if}
+{if $ROW2 == 25}Madison{/if}
+{if $ROW2 == 26}Fort Worth{/if}
+{if $ROW2 == 27}Tucson{/if}
+{if $ROW2 == 28}Salt Lake City{/if}
+{if $ROW2 == 29}Toronto{/if}
+{if $ROW2 == 30}Ottawa{/if}
+{if $ROW2 == 31}Halifax{/if}
+{if $ROW2 == 32}Winnipeg{/if}
+{if $ROW2 == 33}Yellowknife{/if}
+{if $ROW2 == 34}Lisbon{/if}
+{if $ROW2 == 35}Porto{/if}
+{if $ROW2 == 36}Berlin{/if}
+{if $ROW2 == 37}Frankfurt{/if}
+{if $ROW2 == 38}Berlin{/if}
+{if $ROW2 == 39}Paris{/if}
+{if $ROW2 == 40}Paris{/if}
+{if $ROW2 == 41}Lyon{/if}
+{if $ROW2 == 42}Bordeaux{/if}
+{if $ROW2 == 43}Dijon{/if}
+{if $ROW2 == 44}Helsinki{/if}
+{if $ROW2 == 45}Budapest{/if}
+{if $ROW2 == 46}Dublin{/if}
+{if $ROW2 == 47}Rome{/if}
+{if $ROW2 == 48}Amsterdam{/if}
+{if $ROW2 == 49}Warsaw{/if}
+{if $ROW2 == 50}Madrid{/if}
+{if $ROW2 == 51}Stockholm{/if}
+{if $ROW2 == 52}London{/if}
+{if $ROW2 == 53}London{/if}
+{if $ROW2 == 54}Edinburgh{/if} 
+{if $ROW2 == 55}Sidney{/if}
+{if $ROW2 == 56}Buenos Aires{/if}
+{if $ROW2 == 57}Santiago{/if}
+{if $ROW2 == 58}Delhi{/if}
+{if $ROW2 == 59}Bangalore{/if}
