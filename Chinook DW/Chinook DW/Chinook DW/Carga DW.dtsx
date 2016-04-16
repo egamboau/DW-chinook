@@ -7,12 +7,12 @@
   DTS:CreatorName="maestriaBD-PC\maestria BD"
   DTS:DTSID="{FD39ACD4-9087-47F7-8DC3-DDB667750896}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LastModifiedProductVersion="13.0.1000.281"
   DTS:LocaleID="1033"
   DTS:ObjectName="Carga DW"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{DCF69EEB-BB01-4080-9D30-995E2292FC8B}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{4F5A6955-80BF-4952-9BDD-EADBCC5026A9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -31,7 +31,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BA16D7D5-0E9A-409A-B367-F53D54CE4CBC}"
-          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT [DT_AlbumID] FROM [dbo].[DT_Album] WHERE [DT_AlbumID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Album] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Album] ([DT_AlbumID], [Title], [ref_AlbumID])&#xA;&#x9;VALUES (-1, 'n/a', -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Album] OFF;&#xA;END&#xA;&#xA;-----------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_ArtistID] FROM [dbo].[DT_Artist] WHERE [DT_ArtistID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Artist] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Artist]&#xA;           ([DT_ArtistID]&#xA;&#x9;&#x9;   ,[Name]&#xA;           ,[ref_ArtistId])&#xA;     VALUES&#xA;           (-1,'n/a',&#xA;           -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Artist] OFF;&#xA;END&#xA;----------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_BillingAddressID] FROM [dbo].[DT_BillingAddress] WHERE [DT_BillingAddressID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_BillingAddress] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_BillingAddress]&#xA;           ([DT_BillingAddressID]&#xA;&#x9;&#x9;   ,[Address]&#xA;           ,[City]&#xA;           ,[State]&#xA;           ,[Country]&#xA;           ,[PostalCode]&#xA;           ,[ref_BillingAddressID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_BillingAddress] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_CustomerID] FROM [dbo].[DT_Customer] WHERE [DT_CustomerID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Customer] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Customer]&#xA;           ([DT_CustomerID]&#xA;&#x9;&#x9;   ,[FirstName]&#xA;           ,[LastName]&#xA;           ,[Email]&#xA;           ,[ref_CustomerID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Customer] OFF;&#xA;END&#xA;-----------------------------------------------------------------------------&#xA;&#xA;&#xA;IF NOT EXISTS (SELECT [DT_CustomerAddressID] FROM [dbo].[DT_CustomerAddress] WHERE [DT_CustomerAddressID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT  [dbo].[DT_CustomerAddress] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_CustomerAddress]&#xA;           ([DT_CustomerAddressID]&#xA;&#x9;&#x9;   ,[City]&#xA;           ,[State]&#xA;           ,[Country]&#xA;           ,[PostalCode]&#xA;           ,[Phone]&#xA;           ,[Fax]&#xA;           ,[ref_CustomerAddressID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT  [dbo].[DT_CustomerAddress] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_DateID] FROM [dbo].[DT_Date] WHERE [DT_DateID] = -1)&#xA;BEGIN&#xA;INSERT INTO [dbo].[DT_Date]&#xA;           ([DT_DateID]&#xA;           ,[Date]&#xA;           ,[FullDateUK]&#xA;           ,[FullDateUSA]&#xA;           ,[DayOfMonth]&#xA;           ,[DaySuffix]&#xA;           ,[DayName]&#xA;           ,[DayOfWeekUSA]&#xA;           ,[DayOfWeekUK]&#xA;           ,[DayOfWeekInMonth]&#xA;           ,[DayOfWeekInYear]&#xA;           ,[DayOfQuarter]&#xA;           ,[DayOfYear]&#xA;           ,[WeekOfMonth]&#xA;           ,[WeekOfQuarter]&#xA;           ,[WeekOfYear]&#xA;           ,[Month]&#xA;           ,[MonthName]&#xA;           ,[MonthOfQuarter]&#xA;           ,[Quarter]&#xA;           ,[QuarterName]&#xA;           ,[Year]&#xA;           ,[YearName]&#xA;           ,[MonthYear]&#xA;           ,[MMYYYY]&#xA;           ,[FirstDayOfMonth]&#xA;           ,[LastDayOfMonth]&#xA;           ,[FirstDayOfQuarter]&#xA;           ,[LastDayOfQuarter]&#xA;           ,[FirstDayOfYear]&#xA;           ,[LastDayOfYear]&#xA;           ,[IsWeekday])&#xA;     VALUES&#xA;           (-1&#xA;           ,'1-1-1753'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n'&#xA;           ,'n'&#xA;           ,'na'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n'&#xA;           ,'na'&#xA;           ,'ns'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'na'&#xA;           ,'n'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,0)&#xA;END&#xA;---------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_GenreID] FROM [dbo].[DT_Genre] WHERE [DT_GenreID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Genre] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Genre]&#xA;           ([DT_GenreID]&#xA;&#x9;&#x9;   ,[Name]&#xA;           ,[ref_GenreID])&#xA;     VALUES&#xA;           (-1, 'n/a',&#xA;           -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Genre] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------------------&#xA;IF NOT EXISTS (SELECT [DT_MediaTypeID] FROM [dbo].[DT_MediaType] WHERE [DT_MediaTypeID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_MediaType] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_MediaType]&#xA;           ([DT_MediaTypeID]&#xA;&#x9;&#x9;   ,[Name]&#xA;           ,[ref_MediaTypeID])&#xA;     VALUES&#xA;           (-1 ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_MediaType] OFF;&#xA;END&#xA;-------------------------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_TrackID] FROM [dbo].[DT_Track] WHERE [DT_TrackID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Track] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Track]&#xA;           ([DT_TrackID]&#xA;&#x9;&#x9;   ,[Name]&#xA;           ,[Miliseconds]&#xA;           ,[Bytes]&#xA;           ,[ref_TrackID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,-1&#xA;           ,-1&#xA;           ,-1)&#xA;SET IDENTITY_INSERT [dbo].[DT_Track] OFF;&#xA;END&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT [DT_AlbumID] FROM [dbo].[DT_Album] WHERE [DT_AlbumID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Album] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Album] ([DT_AlbumID], [Title], [ref_AlbumID])&#xA; VALUES (-1, 'n/a', -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Album] OFF;&#xA;END&#xA;&#xA;-----------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_ArtistID] FROM [dbo].[DT_Artist] WHERE [DT_ArtistID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Artist] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Artist]&#xA;           ([DT_ArtistID]&#xA;     ,[Name]&#xA;           ,[ref_ArtistId])&#xA;     VALUES&#xA;           (-1,'n/a',&#xA;           -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Artist] OFF;&#xA;END&#xA;----------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_BillingAddressID] FROM [dbo].[DT_BillingAddress] WHERE [DT_BillingAddressID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_BillingAddress] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_BillingAddress]&#xA;           ([DT_BillingAddressID]&#xA;     ,[Address]&#xA;           ,[City]&#xA;           ,[State]&#xA;           ,[Country]&#xA;           ,[PostalCode]&#xA;           ,[ref_BillingAddressID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_BillingAddress] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_CustomerID] FROM [dbo].[DT_Customer] WHERE [DT_CustomerID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Customer] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Customer]&#xA;           ([DT_CustomerID]&#xA;     ,[FirstName]&#xA;           ,[LastName]&#xA;           ,[Email]&#xA;           ,[ref_CustomerID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Customer] OFF;&#xA;END&#xA;-----------------------------------------------------------------------------&#xA;&#xA;&#xA;IF NOT EXISTS (SELECT [DT_CustomerAddressID] FROM [dbo].[DT_CustomerAddress] WHERE [DT_CustomerAddressID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT  [dbo].[DT_CustomerAddress] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_CustomerAddress]&#xA;           ([DT_CustomerAddressID]&#xA;     ,[City]&#xA;           ,[State]&#xA;           ,[Country]&#xA;           ,[PostalCode]&#xA;           ,[Phone]&#xA;           ,[Fax]&#xA;           ,[ref_CustomerAddressID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT  [dbo].[DT_CustomerAddress] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_DateID] FROM [dbo].[DT_Date] WHERE [DT_DateID] = -1)&#xA;BEGIN&#xA;INSERT INTO [dbo].[DT_Date]&#xA;           ([DT_DateID]&#xA;           ,[Date]&#xA;           ,[FullDateUK]&#xA;           ,[FullDateUSA]&#xA;           ,[DayOfMonth]&#xA;           ,[DaySuffix]&#xA;           ,[DayName]&#xA;           ,[DayOfWeekUSA]&#xA;           ,[DayOfWeekUK]&#xA;           ,[DayOfWeekInMonth]&#xA;           ,[DayOfWeekInYear]&#xA;           ,[DayOfQuarter]&#xA;           ,[DayOfYear]&#xA;           ,[WeekOfMonth]&#xA;           ,[WeekOfQuarter]&#xA;           ,[WeekOfYear]&#xA;           ,[Month]&#xA;           ,[MonthName]&#xA;           ,[MonthOfQuarter]&#xA;           ,[Quarter]&#xA;           ,[QuarterName]&#xA;           ,[Year]&#xA;           ,[YearName]&#xA;           ,[MonthYear]&#xA;           ,[MMYYYY]&#xA;           ,[FirstDayOfMonth]&#xA;           ,[LastDayOfMonth]&#xA;           ,[FirstDayOfQuarter]&#xA;           ,[LastDayOfQuarter]&#xA;           ,[FirstDayOfYear]&#xA;           ,[LastDayOfYear]&#xA;           ,[IsWeekday])&#xA;     VALUES&#xA;           (-1&#xA;           ,'1-1-1753'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n'&#xA;           ,'n'&#xA;           ,'na'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n'&#xA;           ,'na'&#xA;           ,'ns'&#xA;           ,'na'&#xA;           ,'n/a'&#xA;           ,'na'&#xA;           ,'n'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'n/a'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,'1-1-1753'&#xA;           ,0)&#xA;END&#xA;---------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_GenreID] FROM [dbo].[DT_Genre] WHERE [DT_GenreID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Genre] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Genre]&#xA;           ([DT_GenreID]&#xA;     ,[Name]&#xA;           ,[ref_GenreID])&#xA;     VALUES&#xA;           (-1, 'n/a',&#xA;           -1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Genre] OFF;&#xA;END&#xA;&#xA;-------------------------------------------------------------------------------------&#xA;IF NOT EXISTS (SELECT [DT_MediaTypeID] FROM [dbo].[DT_MediaType] WHERE [DT_MediaTypeID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_MediaType] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_MediaType]&#xA;           ([DT_MediaTypeID]&#xA;     ,[Name]&#xA;           ,[ref_MediaTypeID])&#xA;     VALUES&#xA;           (-1 ,'n/a'&#xA;           ,-1)&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_MediaType] OFF;&#xA;END&#xA;-------------------------------------------------------------------------------------------&#xA;&#xA;IF NOT EXISTS (SELECT [DT_TrackID] FROM [dbo].[DT_Track] WHERE [DT_TrackID] = -1)&#xA;BEGIN&#xA;&#xA;SET IDENTITY_INSERT [dbo].[DT_Track] ON;&#xA;&#xA;INSERT INTO [dbo].[DT_Track]&#xA;           ([DT_TrackID]&#xA;     ,[Name]&#xA;           ,[Miliseconds]&#xA;           ,[Bytes]&#xA;           ,[ref_TrackID])&#xA;     VALUES&#xA;           (-1, 'n/a'&#xA;           ,-1&#xA;           ,-1&#xA;           ,-1)&#xA;SET IDENTITY_INSERT [dbo].[DT_Track] OFF;&#xA;END&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -58,6 +58,81 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Dimensions\Albums\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Dimensions\Albums\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Dimensions\Albums\Derived Column.Inputs[Derived Column Input].Columns[Title]"
+                          cachedDataType="wstr"
+                          cachedLength="160"
+                          cachedName="Title"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Dimensions\Albums\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[TRIM](#{Package\Dimensions\Albums\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">TRIM(Title)</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Dimensions\Albums\Derived Column.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Dimensions\Albums\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Dimensions\Albums\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
@@ -607,13 +682,18 @@
                   name="Changing Attribute Updates Output"
                   startId="Package\Dimensions\Albums\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
                 <path
+                  refId="Package\Dimensions\Albums.Paths[Derived Column Output]"
+                  endId="Package\Dimensions\Albums\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Derived Column Output"
+                  startId="Package\Dimensions\Albums\Derived Column.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Dimensions\Albums.Paths[New Output]"
                   endId="Package\Dimensions\Albums\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
                   startId="Package\Dimensions\Albums\Slowly Changing Dimension.Outputs[New Output]" />
                 <path
                   refId="Package\Dimensions\Albums.Paths[OLE DB Source Output]"
-                  endId="Package\Dimensions\Albums\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  endId="Package\Dimensions\Albums\Derived Column.Inputs[Derived Column Input]"
                   name="OLE DB Source Output"
                   startId="Package\Dimensions\Albums\OLE DB Source.Outputs[OLE DB Source Output]" />
               </paths>
@@ -634,6 +714,81 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Dimensions\Artist\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Dimensions\Artist\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Dimensions\Artist\Derived Column.Inputs[Derived Column Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="120"
+                          cachedName="Name"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Dimensions\Artist\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[TRIM](#{Package\Dimensions\Artist\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">TRIM(Name)</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Dimensions\Artist\Derived Column.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Dimensions\Artist\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Dimensions\Artist\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
@@ -1165,13 +1320,18 @@
                   name="Changing Attribute Updates Output"
                   startId="Package\Dimensions\Artist\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
                 <path
+                  refId="Package\Dimensions\Artist.Paths[Derived Column Output]"
+                  endId="Package\Dimensions\Artist\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Derived Column Output"
+                  startId="Package\Dimensions\Artist\Derived Column.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Dimensions\Artist.Paths[New Output]"
                   endId="Package\Dimensions\Artist\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
                   startId="Package\Dimensions\Artist\Slowly Changing Dimension.Outputs[New Output]" />
                 <path
                   refId="Package\Dimensions\Artist.Paths[OLE DB Source Output]"
-                  endId="Package\Dimensions\Artist\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  endId="Package\Dimensions\Artist\Derived Column.Inputs[Derived Column Input]"
                   name="OLE DB Source Output"
                   startId="Package\Dimensions\Artist\OLE DB Source.Outputs[OLE DB Source Output]" />
               </paths>
@@ -4269,6 +4429,81 @@
               version="1">
               <components>
                 <component
+                  refId="Package\Dimensions\Genre\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Dimensions\Genre\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Dimensions\Genre\Derived Column.Inputs[Derived Column Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="120"
+                          cachedName="Name"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Dimensions\Genre\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[TRIM](#{Package\Dimensions\Genre\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">TRIM(Name)</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Dimensions\Genre\Derived Column.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Dimensions\Genre\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Dimensions\Genre\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4799,13 +5034,18 @@
                   name="Changing Attribute Updates Output"
                   startId="Package\Dimensions\Genre\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
                 <path
+                  refId="Package\Dimensions\Genre.Paths[Derived Column Output]"
+                  endId="Package\Dimensions\Genre\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Derived Column Output"
+                  startId="Package\Dimensions\Genre\Derived Column.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Dimensions\Genre.Paths[New Output]"
                   endId="Package\Dimensions\Genre\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
                   startId="Package\Dimensions\Genre\Slowly Changing Dimension.Outputs[New Output]" />
                 <path
                   refId="Package\Dimensions\Genre.Paths[OLE DB Source Output]"
-                  endId="Package\Dimensions\Genre\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  endId="Package\Dimensions\Genre\Derived Column.Inputs[Derived Column Input]"
                   name="OLE DB Source Output"
                   startId="Package\Dimensions\Genre\OLE DB Source.Outputs[OLE DB Source Output]" />
               </paths>
@@ -6800,7 +7040,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql12">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
@@ -7036,7 +7276,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           TopLeft="22.0000000000002,1129.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="94.0000000000001,967.5">
+          TopLeft="94.0000000000002,967.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7085,7 +7325,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
     design-time-name="Package\Dimensions\Albums">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42"
           Id="Package\Dimensions\Albums\OLE DB Source"
@@ -7102,28 +7342,6 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           Size="211,42"
           Id="Package\Dimensions\Albums\Slowly Changing Dimension"
           TopLeft="223,107.5" />
-        <EdgeLayout
-          Id="Package\Dimensions\Albums.Paths[OLE DB Source Output]"
-          TopLeft="328.5,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensions\Albums.Paths[New Output]"
           TopLeft="294.666666666667,149.5">
@@ -7156,7 +7374,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-130.424720052083,29.2709313264347,54.1827734375,11.43359375"
+              BoundingBox="-130.424720052084,29.2709313264347,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7194,6 +7412,78 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             <mssgm:EdgeLabel
               BoundingBox="-97.7005729166667,29.2709313264346,157.0678125,11.6630859375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Dimensions\Albums\Derived Column"
+          TopLeft="539,63" />
+        <EdgeLayout
+          Id="Package\Dimensions\Albums.Paths[OLE DB Source Output]"
+          TopLeft="404.5,26.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.5,57.5000000000001"
+              Start="0,0"
+              End="127,57.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.25,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63.25,0"
+                    Point2="67.25,0"
+                    Point3="67.25,4" />
+                  <mssgle:LineSegment
+                    End="67.25,53.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.25,53.5000000000001"
+                    Point2="67.25,57.5000000000001"
+                    Point3="71.25,57.5000000000001" />
+                  <mssgle:LineSegment
+                    End="127,57.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimensions\Albums.Paths[Derived Column Output]"
+          TopLeft="539,89.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-105,38.8333333333333"
+              Start="0,0"
+              End="-97.5,38.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-40.3119266055046,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.3119266055046,0"
+                    Point2="-44.3119266055046,0"
+                    Point3="-44.3119266055046,4" />
+                  <mssgle:LineSegment
+                    End="-44.3119266055046,34.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.3119266055046,34.8333333333333"
+                    Point2="-44.3119266055046,38.8333333333333"
+                    Point3="-48.3119266055046,38.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-97.5,38.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7259,7 +7549,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
     design-time-name="Package\Dimensions\Artist">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42"
           Id="Package\Dimensions\Artist\OLE DB Source"
@@ -7276,28 +7566,6 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           Size="165,42"
           Id="Package\Dimensions\Artist\Insert Destination"
           TopLeft="5.5,209.5" />
-        <EdgeLayout
-          Id="Package\Dimensions\Artist.Paths[OLE DB Source Output]"
-          TopLeft="328.5,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensions\Artist.Paths[New Output]"
           TopLeft="294.666666666667,149.5">
@@ -7330,7 +7598,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-130.424720052083,29.2709313264347,54.1827734375,11.43359375"
+              BoundingBox="-130.424720052084,29.2709313264347,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7368,6 +7636,78 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             <mssgm:EdgeLabel
               BoundingBox="-97.7005729166667,29.2709313264346,157.0678125,11.6630859375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Dimensions\Artist\Derived Column"
+          TopLeft="485,46" />
+        <EdgeLayout
+          Id="Package\Dimensions\Artist.Paths[OLE DB Source Output]"
+          TopLeft="404.5,26.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.5,40.5000000000001"
+              Start="0,0"
+              End="73,40.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.25,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.25,0"
+                    Point2="40.25,0"
+                    Point3="40.25,4" />
+                  <mssgle:LineSegment
+                    End="40.25,36.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.25,36.5000000000001"
+                    Point2="40.25,40.5000000000001"
+                    Point3="44.25,40.5000000000001" />
+                  <mssgle:LineSegment
+                    End="73,40.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimensions\Artist.Paths[Derived Column Output]"
+          TopLeft="485,72.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51,55.8333333333333"
+              Start="0,0"
+              End="-43.5,55.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5229357798165,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5229357798165,0"
+                    Point2="-21.5229357798165,0"
+                    Point3="-21.5229357798165,4" />
+                  <mssgle:LineSegment
+                    End="-21.5229357798165,51.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5229357798165,51.8333333333333"
+                    Point2="-21.5229357798165,55.8333333333333"
+                    Point3="-25.5229357798165,55.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-43.5,55.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7435,25 +7775,25 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="211,42"
-          Id="Package\Dimensions\Billing Address\Slowly Changing Dimension"
-          TopLeft="209.5,108.5" />
-        <NodeLayout
           Size="165,42"
           Id="Package\Dimensions\Billing Address\Insert Destination"
           TopLeft="5.50000000000006,210.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Dimensions\Billing Address\Slowly Changing Dimension"
+          TopLeft="209.5,108.5" />
         <NodeLayout
           Size="168,42"
           Id="Package\Dimensions\Billing Address\OLE DB Command"
           TopLeft="231,210.5" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Dimensions\Billing Address\Derived Column"
-          TopLeft="489,92" />
-        <NodeLayout
           Size="152,42"
           Id="Package\Dimensions\Billing Address\OLE DB Source"
           TopLeft="239,6.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Dimensions\Billing Address\Derived Column"
+          TopLeft="489,92" />
         <EdgeLayout
           Id="Package\Dimensions\Billing Address.Paths[OLE DB Source Output]"
           TopLeft="315,48.5">
@@ -7485,7 +7825,9 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7555,7 +7897,9 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7734,54 +8078,46 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="168,42"
-          Id="Package\Dimensions\Customer Address\OLE DB Command"
-          TopLeft="47,216" />
-        <NodeLayout
           Size="152,42"
           Id="Package\Dimensions\Customer Address\OLE DB Source"
           TopLeft="230,22" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Dimensions\Customer Address\Slowly Changing Dimension"
+          TopLeft="203,99" />
         <NodeLayout
           Size="165,42"
           Id="Package\Dimensions\Customer Address\Insert Destination"
           TopLeft="297,216" />
         <NodeLayout
-          Size="211,42"
-          Id="Package\Dimensions\Customer Address\Slowly Changing Dimension"
-          TopLeft="203,99" />
+          Size="156,42"
+          Id="Package\Dimensions\Customer Address\Derived Column"
+          TopLeft="510,96" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Dimensions\Customer Address\OLE DB Command"
+          TopLeft="47,216" />
         <EdgeLayout
-          Id="Package\Dimensions\Customer Address.Paths[New Output]"
-          TopLeft="342.333333333333,141">
+          Id="Package\Dimensions\Customer Address.Paths[Derived Column Output]"
+          TopLeft="510,118.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.1666666666667,75"
+              EndConnector="-96,0"
               Start="0,0"
-              End="37.1666666666667,67.5">
+              End="-88.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.3386641580433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.3386641580433"
-                    Point2="0,30.3386641580433"
-                    Point3="4,30.3386641580433" />
-                  <mssgle:LineSegment
-                    End="33.1666666666667,30.3386641580433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.1666666666667,30.3386641580433"
-                    Point2="37.1666666666667,30.3386641580433"
-                    Point3="37.1666666666667,34.3386641580433" />
-                  <mssgle:LineSegment
-                    End="37.1666666666667,67.5" />
+                    End="-88.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8.50805338541666,35.3386641580433,54.1827734375,11.43359375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7821,10 +8157,6 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Dimensions\Customer Address\Derived Column"
-          TopLeft="510,96" />
         <EdgeLayout
           Id="Package\Dimensions\Customer Address.Paths[OLE DB Source Output]"
           TopLeft="306,64">
@@ -7856,29 +8188,45 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensions\Customer Address.Paths[Derived Column Output]"
-          TopLeft="510,118.5">
+          Id="Package\Dimensions\Customer Address.Paths[New Output]"
+          TopLeft="342.333333333333,141">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-96,0"
+              EndConnector="37.1666666666667,75"
               Start="0,0"
-              End="-88.5,0">
+              End="37.1666666666667,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-88.5,0" />
+                    End="0,26.3386641580433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.3386641580433"
+                    Point2="0,30.3386641580433"
+                    Point3="4,30.3386641580433" />
+                  <mssgle:LineSegment
+                    End="33.1666666666667,30.3386641580433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.1666666666667,30.3386641580433"
+                    Point2="37.1666666666667,30.3386641580433"
+                    Point3="37.1666666666667,34.3386641580433" />
+                  <mssgle:LineSegment
+                    End="37.1666666666667,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8.50805338541666,35.3386641580433,54.1827734375,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7901,7 +8249,7 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
     design-time-name="Package\Dimensions\Genre">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42"
           Id="Package\Dimensions\Genre\OLE DB Source"
@@ -7918,28 +8266,6 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
           Size="165,42"
           Id="Package\Dimensions\Genre\Insert Destination"
           TopLeft="228,213" />
-        <EdgeLayout
-          Id="Package\Dimensions\Genre.Paths[OLE DB Source Output]"
-          TopLeft="202.25,50">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensions\Genre.Paths[New Output]"
           TopLeft="234.333333333333,150">
@@ -8012,6 +8338,78 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Dimensions\Genre\Derived Column"
+          TopLeft="454,38" />
+        <EdgeLayout
+          Id="Package\Dimensions\Genre.Paths[OLE DB Source Output]"
+          TopLeft="280,29">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="174,30"
+              Start="0,0"
+              End="166.5,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="83,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83,0"
+                    Point2="87,0"
+                    Point3="87,4" />
+                  <mssgle:LineSegment
+                    End="87,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="87,26"
+                    Point2="87,30"
+                    Point3="91,30" />
+                  <mssgle:LineSegment
+                    End="166.5,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimensions\Genre.Paths[Derived Column Output]"
+          TopLeft="532,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-331.5,28"
+              Start="0,0"
+              End="-331.5,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="-4,14" />
+                  <mssgle:LineSegment
+                    End="-327.5,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-327.5,14"
+                    Point2="-331.5,14"
+                    Point3="-331.5,18" />
+                  <mssgle:LineSegment
+                    End="-331.5,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -8055,7 +8453,9 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8173,7 +8573,9 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8257,24 +8659,40 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="NaN,NaN"
+          Size="152,42"
           Id="Package\Tabla Hechos\OLE DB Source"
-          TopLeft="NaN,NaN" />
+          TopLeft="346,42" />
         <NodeLayout
-          Size="NaN,NaN"
+          Size="173,42"
           Id="Package\Tabla Hechos\OLE DB Destination"
-          TopLeft="NaN,NaN" />
+          TopLeft="308,187" />
         <EdgeLayout
           Id="Package\Tabla Hechos.Paths[OLE DB Source Output]"
-          TopLeft="NaN,NaN">
+          TopLeft="422,84">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="{assembly:Null}"
+              EndConnector="-27.5,103"
               Start="0,0"
-              End="0,0">
+              End="-27.5,95.5">
               <mssgle:Curve.Segments>
-                <assembly:Null />
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5"
+                    Point2="0,51.5"
+                    Point3="-4,51.5" />
+                  <mssgle:LineSegment
+                    End="-23.5,51.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.5,51.5"
+                    Point2="-27.5,51.5"
+                    Point3="-27.5,55.5" />
+                  <mssgle:LineSegment
+                    End="-27.5,95.5" />
+                </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
@@ -8287,5 +8705,13 @@ LEFT JOIN [Chinook_DW].[dbo].[DT_Date] DW_D
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tabla Hechos\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
